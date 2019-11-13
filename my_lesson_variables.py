@@ -1,6 +1,8 @@
 a = "Hello"
-b = "25"
+b = 25
+c = 5
+d = b + c
 
 print(a)
 print(b)
-print(a + " " + b)
+print(a + ": " + str(d))
