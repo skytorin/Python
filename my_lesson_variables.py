@@ -6,3 +6,4 @@ d = b + c
 print(a)
 print(b)
 print(a + ": " + str(d))
+print(b + d)
