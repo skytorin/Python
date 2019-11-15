@@ -40,10 +40,3 @@ print(cities)
 cities.reverse()
 print(cities)
 
-
-
-
-
-
-
-
