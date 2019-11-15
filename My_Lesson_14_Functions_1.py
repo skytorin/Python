@@ -1,8 +1,7 @@
-# Пример двух функций
+# Пример написания двух функций
 def napeshatat_privetstvie(name):
     """napeshatat_privetstvie"""
     print("Congratulation " + name + " wish you all the best!")
-
 
 def summa(x, y):
     """summa"""
@@ -16,7 +15,8 @@ x = summa(33, 22)
 print(x)
 
 
-# Функция вычесления факториала
+
+# Создание функция для вычесления факториала
 def factorial(x):
     """Calculate Factorial of number X"""
     otvet = 1
