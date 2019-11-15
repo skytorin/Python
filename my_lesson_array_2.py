@@ -1,3 +1,4 @@
+# Присваеваем переменной дааные из массива
 cars = ['bmw', 'vw', 'seat',  'scoda', 'kada']
 print(cars)
 
