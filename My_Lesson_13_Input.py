@@ -34,3 +34,4 @@ while msg != 'stop'.upper():
     mylist.append(msg)
 print(mylist)
 
+
