@@ -36,6 +36,3 @@ print("Max number is: " + str(max(mynumber_list)))
 print("Min number is: " + str(min(mynumber_list)))
 print("Sum number is: " + str(sum(mynumber_list)))
 
-
-
-
