@@ -33,11 +33,3 @@ if enemy['health'] < 80:
 print(enemy)
 
 
-
-
-
-
-
-
-
-
