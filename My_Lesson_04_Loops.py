@@ -1,10 +1,11 @@
+# Пример цикла For
 for x in range(10,10+2,2):
     print(x)
     print("----")
     print("Number x = " + str (x))
 
 
-
+# Пример цикла For (еще вариант)
 for x in range(10, 0, -2):
     print(x)
     print("----")
