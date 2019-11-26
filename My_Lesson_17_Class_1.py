@@ -1,3 +1,4 @@
+# Выполняем импорт функций из другого файла
 from My_Lesson_17_Class_Hero import *
 # ----------- MAIN --------------------------------
 myhero1 = My_Lesson_17_Class_Hero("Vurdalak", 5, "Orc")
