@@ -7,5 +7,3 @@ print(num1/10)
 print(num2/3)
 
 print(100+4/2-1+(2+5))
-
-111
