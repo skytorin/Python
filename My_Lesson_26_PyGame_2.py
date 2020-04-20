@@ -45,16 +45,3 @@ while game_over == False:
     screen.fill(bg_color)
     screen.blit(myimage, (x, y))
     pygame.display.flip()
-
-
-
-
-
-
-
-
-
-
-
-
-My_Lesson_26_PyGame_2.jpg
