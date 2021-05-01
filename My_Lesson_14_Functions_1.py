@@ -15,7 +15,6 @@ x = summa(33, 22)
 print(x)
 
 
-
 # Создание функция для вычесления факториала
 def factorial(x):
     """Calculate Factorial of number X"""
