@@ -8,7 +8,7 @@ else:
 # Проверка введеного возраста с указанием на принадлежность возрасной группе
 age = 19
 if (age <= 4):
-    print("Yoa are BABY")
+    print("You are BABY")
 elif (age > 4) and (age < 12):
     print("You are KID")
 elif (age >=12) and (age < 19):

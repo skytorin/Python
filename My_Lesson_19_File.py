@@ -1,6 +1,7 @@
 # Работа с файлами
 # Читаем файл с диска целиком в кодировке cp1251
-#inputfile = "My_Lesson_19_File_user_names.txt"    - файл находится на уровень выше самого скрипта
+# inputfile = "My_Lesson_19_File_user_names.txt"    
+# файл находится на уровень выше самого скрипта
 inputfile = "My_Lesson_19_File_user_names.txt"
 myfile = open(inputfile, mode="r", encoding="cp1251")
 print(myfile.read())
@@ -23,7 +24,8 @@ for num, line in enumerate(myfile):
 
 
 print ("==============================================================================================================")
-# Поиск строк содержащих текст vasya и запись найденных строк в новый файл, c ПЕРЕЗАПИСЬЮ содержимого
+# Поиск строк содержащих текст vasya и запись найденных строк в новый файл, 
+# c ПЕРЕЗАПИСЬЮ содержимого
 inputfile = "My_Lesson_19_File_list_of_passwords.txt"
 outputfile = "My_Lesson_19_File_my_passwords.txt"
 password_tolookfor = "vasya"
@@ -38,7 +40,8 @@ myfile_out.close()
 
 
 print ("==============================================================================================================")
-# Поиск строк содержащих текст vasya и запись найденных строк в новый файл, c СОХРАНЕНИЕМ содержимого
+# Поиск строк содержащих текст vasya и запись найденных строк в новый файл, 
+# c СОХРАНЕНИЕМ содержимого
 inputfile = "My_Lesson_19_File_list_of_passwords.txt"
 outputfile = "My_Lesson_19_File_my_passwords.txt"
 password_tolookfor = "Petya"

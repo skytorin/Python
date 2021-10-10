@@ -36,7 +36,7 @@ print(cities)
 # Сортировка данных в массиве Z->A
 cities.sort(reverse=True)
 print(cities)
-или
+# или
 cities.reverse()
 print(cities)
 

@@ -5,6 +5,7 @@ import sys
 
 os.system("dir")
 os.system("ipconfig")
+os.system('ifconfig')
 os.system("dir > My_Lesson_07_CMD.txt")
 
 # Указание необходимого кода выхода отличного от 0
