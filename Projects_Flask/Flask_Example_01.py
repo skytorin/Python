@@ -15,6 +15,10 @@ app = Flask(__name__)
 @app.route("/")
 def hello():
     return "Hello, World!"
+
+@app.route('/user/<int:user_id>/')
+def user_profile(user_id):
+    return "Profile page of user #{}".format(user_id)    
     
 @app.route("/api/sum")
 def sum():
