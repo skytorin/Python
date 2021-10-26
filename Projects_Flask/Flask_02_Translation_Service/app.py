@@ -9,7 +9,7 @@ from flask import Flask, redirect, url_for, request, render_template, session
 
 config = {
         "port": os.environ.get('PORT', 5000),
-        "debug": os.environ.get('DEBUG', False)
+        "debug": os.environ.get('DEBUG', True)
 }
 
 app = Flask(__name__)
