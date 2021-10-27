@@ -14,9 +14,11 @@ config = {
 
 app = Flask(__name__)
 
+
 @app.route('/', methods=['GET'])
 def index():
     return render_template('index.html')
+
 
 @app.route('/', methods=['POST'])
 def index_post():
@@ -33,19 +35,17 @@ def index_post():
         original_text_case = original_text.lower()
     elif target_language == "swapcase":
         original_text_case = original_text.swapcase()
-    else :
+    else:
         original_text_case = original_text    
      
 
-    return render_template(
-        'results.html',
-        original_text = original_text_case,
-        target_language = target_language,
-        key = key,
-        endpoint = endpoint,
-        location = location
-    )
-       
+    return render_template('results.html',
+                           original_text=original_text_case,
+                           target_language=target_language,
+                           key=key,
+                           endpoint=endpoint,
+                           location=location
+                           )
 
 
 if __name__ == "__main__":
