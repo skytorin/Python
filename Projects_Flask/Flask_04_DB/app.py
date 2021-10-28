@@ -2,7 +2,7 @@
 
 
 import os
-
+from module_pg_select import pg_select
 
 from flask import Flask, redirect, url_for, request, render_template, session
 
@@ -14,23 +14,25 @@ config = {
 
 app = Flask(__name__)
 
+
 @app.route('/', methods=['GET'])
 def index():
     return render_template('index.html')
 
-@app.route('/', methods=['POST'])
-def index_post():
-#    original_text = request.form['text']
-#    target_language = request.form['language'] 
-     return render_template(
-        'select.html'
-#        original_text = original_text_case,
-#        target_language = target_language,
-#        key = key,
-#        endpoint = endpoint,
-#        location = location
-    )
-       
+
+@app.route('/select', methods=['GET'])
+def select_page():
+    return render_template('select.html')
+
+
+@app.route('/insert', methods=['GET'])
+def insert_page():
+    return render_template('insert.html')
+
+
+@app.route('/update', methods=['GET'])
+def update_page():
+    return render_template('update.html')
 
 
 if __name__ == "__main__":
