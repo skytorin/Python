@@ -2,7 +2,7 @@
 
 
 import os
-from module_pg_select import pg_select
+#from module_pg_select import pg_select
 
 from flask import Flask, redirect, url_for, request, render_template, session
 
