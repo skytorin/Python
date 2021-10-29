@@ -2,9 +2,10 @@
 
 
 import os
-#from module_pg_select import pg_select
-
 from flask import Flask, redirect, url_for, request, render_template, session
+from module_psycopg2_select import psycopg2_select
+from module_pymssql_select import pymssql_select
+from module_pypyodbc_select import pypyodbc_select
 
 
 config = {
@@ -37,5 +38,3 @@ def update_page():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=config["port"], debug=config["debug"])
-
-

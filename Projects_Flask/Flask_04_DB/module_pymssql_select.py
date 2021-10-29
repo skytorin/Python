@@ -1,38 +1,39 @@
-#!/usr/bin/env python3
-
 import os
 import pymssql
+from dotenv import load_dotenv
 
 
-my_user = os.environ.get('USER_DB')         # .env
-my_password = os.environ.get('PASS_DB')     # .env
-server = "ioserver-sql17.neolant.loc"
-user = 'n.sergeev'
-password = 'gD1Ca768W4'
-database = "NS_RELEASE_1_29_0"
+def pymssql_select():
 
-connection = pymssql.connect(server, user, password, database)
+    dotenv_path = os.path.join(os.path.dirname(__file__), '.env')
+    if os.path.exists(dotenv_path):
+        load_dotenv(dotenv_path)
 
-cursor = connection.cursor()
+    server = os.environ.get('SERVER_DB')  # .env
+    user = os.environ.get('USER_DB')  # .env
+    password = os.environ.get('PASS_DB')  # .env
+    database = os.environ.get('DATABASE_DB')  # .env
 
-mySQLQuery = ("SELECT userName, uuid, fullName, phone, email, lastActivity FROM dbo.ns_sec_Users")
+    connection = pymssql.connect(server, user, password, database)
 
-cursor.execute(mySQLQuery)
-results = cursor.fetchall()
+    cursor = connection.cursor()
 
-# print(results)    # вывод в формате list
+    mySQLQuery = ("SELECT userName, uuid, fullName, phone, email, lastActivity FROM dbo.ns_sec_Users")
 
-for row in results:
-    username = row[0]
-    uuid = row[1]
-    fullname = row[2]
-    phone = row[3]
-    email = row[4]
-    lastActivity = row[5]
+    cursor.execute(mySQLQuery)
+    results = cursor.fetchall()
 
-    print(str(username) + ";" + str(uuid) + ";" + str(fullname) + ";" + str(phone) + ";" +str(email) + ";" + str(lastActivity))
+    # print(results)    # вывод в формате list
 
-connection.close()
+    for row in results:
+        username = row[0]
+        uuid = row[1]
+        fullname = row[2]
+        phone = row[3]
+        email = row[4]
+        lastActivity = row[5]
 
-print(my_user)
-print(my_password)
+        print(str(username) + ";" + str(uuid) + ";" + str(fullname) + ";" + str(phone) + ";" +str(email) + ";" + str(lastActivity))
+
+    connection.close()
+

@@ -1,7 +1,7 @@
 import psycopg2
 
 
-def pg_select():
+def psycopg2_select():
     con = psycopg2.connect(
         database="postgres",
         user="postgres",
