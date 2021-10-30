@@ -36,4 +36,4 @@ def pymssql_select():
         print(str(username) + ";" + str(uuid) + ";" + str(fullname) + ";" + str(phone) + ";" +str(email) + ";" + str(lastActivity))
 
     connection.close()
-
+    return results
