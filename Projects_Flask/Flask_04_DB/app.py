@@ -4,9 +4,8 @@
 import os
 from flask import Flask, redirect, url_for, request, render_template, session
 from module_psycopg2_select import psycopg2_select
-#from module_psycopg2_connectdb import psycopg2_connectdb
-#from module_pymssql_select import pymssql_select
-#from module_pypyodbc_select import pypyodbc_select
+# from module_pymssql_select import pymssql_select
+# from module_pypyodbc_select import pypyodbc_select
 
 
 config = {
@@ -24,7 +23,6 @@ def index():
 
 @app.route('/select', methods=['GET'])
 def select_page():
-    #x = psycopg2_connectdb()
     x = psycopg2_select()
     return render_template('select.html',
                            select_text=x)
