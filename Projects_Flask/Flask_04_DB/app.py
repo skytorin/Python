@@ -24,8 +24,7 @@ def index():
 @app.route('/select', methods=['GET'])
 def select_page():
     x = psycopg2_select()
-    return render_template('select.html',
-                           select_text=x)
+    return render_template('select.html', button_select=x)
 
 
 @app.route('/insert', methods=['GET'])

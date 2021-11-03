@@ -24,7 +24,7 @@ def pymssql_select():
     results = cursor.fetchall()
 
     # print(results)    # вывод в формате list
-
+    # rows = []
     for row in results:
         username = row[0]
         uuid = row[1]
@@ -33,7 +33,10 @@ def pymssql_select():
         email = row[4]
         lastActivity = row[5]
 
-        print(str(username) + ";" + str(uuid) + ";" + str(fullname) + ";" + str(phone) + ";" +str(email) + ";" + str(lastActivity))
+     #  print(str(username) + ";" + str(uuid) + ";" + str(fullname) + ";" + str(phone) + ";" +str(email) + ";" + str(lastActivity))
+     #  row2 = str(username) + "; " + str(uuid) + "; " + str(fullname) + "; " + str(phone) + "; " +str(email) + "; " + str(lastActivity)
+     #  rows.append(row2)
 
     connection.close()
     return results
+    #return rows
