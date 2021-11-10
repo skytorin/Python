@@ -10,11 +10,41 @@
 </head>
 <body>
     <div class="container">
-        <h2>Insert Page</h2>
+        <br>
+        <h2><b>Insert Page</b></h2>
+        <br>
         <div>
+            <form method="POST">
+                <div class="form-group">
+                    <div>ADMISSION</div>
+                    <textarea name="text" cols="1" rows="1" class="form-control"></textarea>
+                </div>
+                <div class="form-group">
+                    <div>NAME</div>
+                    <textarea name="text" cols="1" rows="1" class="form-control"></textarea>
+                </div>
+                <div class="form-group">
+                    <div>AGE</div>
+                    <textarea name="text" cols="1" rows="1" class="form-control"></textarea>
+                </div>
+                <div class="form-group">
+                    <div>COURSE</div>
+                    <textarea name="text" cols="1" rows="1" class="form-control"></textarea>
+                </div>
+                <div class="form-group">
+                    <div>DEPARTMENT</div>
+                    <textarea name="text" cols="1" rows="1" class="form-control"></textarea>
+                </div>
+                 <div>
+                    <button type="submit" class="btn btn-success">INSERT</button>
+                </div>
+            </form>
         </div>
-        <div>
-            <a href="{{ url_for('index') }}">Return Home Page</a>
+        <br>
+        <br>
+        <br>
+        <div align="center">
+            <a href="{{ url_for('index') }}"><b><<<    Return Home Page</b></a>
         </div>
     </div>
 </body>

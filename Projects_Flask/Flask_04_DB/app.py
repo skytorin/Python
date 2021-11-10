@@ -37,5 +37,9 @@ def update_page():
     return render_template('update.html')
 
 
+@app.route('/delete', methods=['GET'])
+def delete_page():
+    return render_template('delete.html')
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=config["port"], debug=config["debug"])

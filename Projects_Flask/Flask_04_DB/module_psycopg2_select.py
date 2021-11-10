@@ -8,11 +8,11 @@ if os.path.exists(dotenv_path):
     load_dotenv(dotenv_path)
 
 def psycopg2_select():
-    my_server = os.environ.get('POSTGRES_SERVER')  # .env
-    my_database = os.environ.get('POSTGRES_DB')  # .env
-    my_port = os.environ.get('POSTGRES_PORT')  # .env
-    my_user = os.environ.get('POSTGRES_USER')  # .env
-    my_password = os.environ.get('POSTGRES_PASS')  # .env
+    my_server = os.environ.get('POSTGRES_SERVER')   # .env
+    my_database = os.environ.get('POSTGRES_DB')     # .env
+    my_port = os.environ.get('POSTGRES_PORT')       # .env
+    my_user = os.environ.get('POSTGRES_USER')       # .env
+    my_password = os.environ.get('POSTGRES_PASS')   # .env
 
     con = psycopg2.connect(host=my_server,
                            database=my_database,
@@ -26,7 +26,7 @@ def psycopg2_select():
 
     rows = cur.fetchall()
 
-    for row in rows:
-        print(row[0], row[1], row[2], row[3], row[4], sep='\t')
+#    for row in rows:
+#        print(row[0], row[1], row[2], row[3], row[4], sep='\t')
     con.close()
     return rows
