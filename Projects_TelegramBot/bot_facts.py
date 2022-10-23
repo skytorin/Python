@@ -1,5 +1,4 @@
-import telebot
-import random
+import telebot, random, os
 from telebot import types
 # Загружаем список интересных фактов
 f = open('data/facts.txt', 'r', encoding='UTF-8')
@@ -10,7 +9,7 @@ f = open('data/thinks.txt', 'r', encoding='UTF-8')
 thinks  = f.read().split('\n')
 f.close()
 # Создаем бота
-bot = telebot.TeleBot('telegram_token')
+bot = telebot.TeleBot(os.environ['BOT_TOKEN'])
 
 # Команда start
 @bot.message_handler(commands=["start"])
