@@ -6,3 +6,6 @@ __pycache__/
 /__pycache__
 .env
 /Projects_TelegramBot/.env
+/Projects_TelegramBot/telebot
+/Projects_TelegramBot/env/
+/Projects_TelegramBot/my-bot/
